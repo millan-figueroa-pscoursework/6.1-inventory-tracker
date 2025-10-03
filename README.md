@@ -2,8 +2,12 @@
 
 ### Inside src/models/Product.ts, create a Product base class with the following:
 
-Properties: sku (string), name (string), price (number).
-Methods:
+### Properties:
+
+-sku (string), name (string), price (number).<br>
+
+### Methods:
+
 -displayDetails() - a method that returns a formatted string with the product’s details.<br>
 -getPriceWithTax() - a method that calculates the final price of the product with tax.<br>
 
@@ -54,8 +58,6 @@ Methods:
 
 ## Critical Thinking
 
-### After completing the lab, consider the following questions:
-
 ### How does TypeScript enforce type safety in this object-oriented program?
 
 ### How did inheritance reduce code duplication for PhysicalProduct and DigitalProduct?
@@ -64,4 +66,4 @@ Methods:
 
 ### If you had to add a new type of product (e.g., a SubscriptionProduct), how would polymorphism make this extension straightforward?
 
-### By completing this lab, you will demonstrate your understanding of TypeScript, type annotations, interfaces, and key object-oriented programming concepts such as inheritance, encapsulation, and polymorphism.
+By completing this lab, you will demonstrate your understanding of TypeScript, type annotations, interfaces, and key object-oriented programming concepts such as inheritance, encapsulation, and polymorphism.
