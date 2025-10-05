@@ -1,6 +1,6 @@
+import type { DiscountableProduct } from "../interfaces/discountableProduct";
 
-
-export default class Product {
+export default class Product implements DiscountableProduct {
     sku: string;
     name: string;
     price: number;
@@ -18,6 +18,10 @@ export default class Product {
 
     getPriceWithTax(): number {
         return this.price * (0.08 + 1);
+    }
+
+    applyDiscount(discountPercent: number): number {
+        return this.price - discountPercent;
     }
 }
 
