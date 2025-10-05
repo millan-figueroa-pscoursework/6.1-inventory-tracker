@@ -4,27 +4,27 @@
 
 ### Properties:
 
--sku (string), name (string), price (number).<br>
+[x] sku (string), name (string), price (number).<br>
 
 ### Methods:
 
--displayDetails() - a method that returns a formatted string with the product’s details.<br>
--getPriceWithTax() - a method that calculates the final price of the product with tax.<br>
+[x] displayDetails() - a method that returns a formatted string with the product’s details.<br>
+[x] getPriceWithTax() - a method that calculates the final price of the product with tax.<br>
 
 ## Create the PhysicalProduct Subclass:
 
 ### Inside src/models/PhysicalProduct.ts, create a PhysicalProduct class that extends Product.
 
--Add a weight property (number) for physical products.<br>
--Override the getPriceWithTax() method to calculate a final price that includes a 10% tax rate.<br>
--Use a getter method to return the formatted weight in kilograms (e.g. “2.5 kg”).<br>
+[x] Add a weight property (number) for physical products.<br>
+[x] Override the getPriceWithTax() method to calculate a final price that includes a 10% tax rate.<br>
+[x] Use a getter method to return the formatted weight in kilograms (e.g. “2.5 kg”).<br>
 
 ## Create the DigitalProduct Subclass:
 
 ### Inside src/models/DigitalProduct.ts, create a DigitalProduct class that extends Product.
 
--Add a fileSize property (number) for digital products.<br>
--Override the getPriceWithTax() method to calculate a final price with no tax, since the digital products do not require tax.<br>
+[x] Add a fileSize property (number) for digital products.<br>
+[x] Override the getPriceWithTax() method to calculate a final price with no tax, since the digital products do not require tax.<br>
 -Use a getter method to return the formatted file size in megabytes.<br>
 
 ## Create a Tax Calculator Utility:

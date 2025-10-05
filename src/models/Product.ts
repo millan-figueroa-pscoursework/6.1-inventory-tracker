@@ -15,11 +15,12 @@ export default class Product {
     }
 
     getPriceWithTax(): number {
-        return this.price * (.08 + 1);
+        return this.price * (0.08 + 1);
     }
 }
 
 const product1 = new Product('233', 'iphone', 800);
 
-console.log(product1);
-console.log(product1.displayDetails)
+// console.log(product1);
+// console.log(product1.displayDetails())
+// console.log(product1.getPriceWithTax())
