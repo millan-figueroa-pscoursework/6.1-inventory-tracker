@@ -7,13 +7,14 @@ export default class Product {
         this.sku = sku;
         this.name = name;
         this.price = price;
+
     }
 
-    displayDetails() {
+    displayDetails(): string {
         return `SKU: ${this.sku}, Name: ${this.name}, Price: ${this.price}`
     }
 
-    getPriceWithTax() {
-        return this.price * (0.0 + 1);
+    getPriceWithTax(): number {
+        return this.price * (.08 + 1);
     }
-}
+} 
