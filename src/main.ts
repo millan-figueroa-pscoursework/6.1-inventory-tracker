@@ -21,3 +21,4 @@ console.log(product6.displayDetails());
 console.log(product5.getPriceWithTax());
 console.log(product5.returnFormattedFileSize);
 console.log(product7.displayDetails());
+console.log(calculateTax(product7.price));
