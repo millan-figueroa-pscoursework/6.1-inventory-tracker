@@ -13,7 +13,7 @@ export default class Product {
     }
 
     displayDetails(): string {
-        return `SKU: ${this.sku}, Name: ${this.name}, Price: ${this.price}`
+        return `SKU: ${this.sku}, Name: ${this.name}, Price: $${this.price}`
     }
 
     getPriceWithTax(): number {

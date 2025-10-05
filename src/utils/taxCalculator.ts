@@ -1,7 +1,8 @@
 // import Product from "../models/Product";
 
 
-export function calculateTax(product: number): string {
-    return `The tax is: ${product * 1000}`;
+export function calculateTax(product: number): number {
+    let tax = product * 0.20;
+    return tax;
 }
 
