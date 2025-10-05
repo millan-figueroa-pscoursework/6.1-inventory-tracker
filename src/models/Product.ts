@@ -1,3 +1,5 @@
+import { calculateTax } from "../utils/taxCalculator";
+
 export default class Product {
     sku: string;
     name: string;
@@ -19,8 +21,9 @@ export default class Product {
     }
 }
 
-const product1 = new Product('233', 'iphone', 800);
+// const product1 = new Product('233', 'iphone', 800);
+// const product3 = new Product('236', 'Jetpack', 8000);
 
-// console.log(product1);
-// console.log(product1.displayDetails())
+// console.log(product3);
+// console.log(product3.calculateTax())
 // console.log(product1.getPriceWithTax())
