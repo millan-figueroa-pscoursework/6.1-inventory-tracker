@@ -9,15 +9,17 @@ export default class PhysicalProduct extends Product {
         this.weight = weight;
     }
 
-    getPriceWithTax() {
-        return this.price * (0.08 + 1);
+    getPriceWithTax(): number {
+        return this.price * (0.10 + 1);
     }
 
-    getweightInKilos() {
+    getWeightInKilos(): number {
         return this.weight / 2.5
     }
 }
 
-const product2 = new Product('234', 'android', 500);
+const product2 = new PhysicalProduct('234', 'android', 500, 8);
 
 console.log(product2.displayDetails());
+console.log(product2.getPriceWithTax());
+console.log(product2.getWeightInKilos());
