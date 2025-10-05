@@ -16,6 +16,10 @@ export default class PhysicalProduct extends Product {
     getWeightInKilos(): number {
         return this.weight / 2.5
     }
+
+    get returnFormattedWeightInKg(): string {
+        return `${this.weight}kg`
+    }
 }
 
 const product2 = new PhysicalProduct('234', 'android', 500, 8);
@@ -23,3 +27,4 @@ const product2 = new PhysicalProduct('234', 'android', 500, 8);
 console.log(product2.displayDetails());
 console.log(product2.getPriceWithTax());
 console.log(product2.getWeightInKilos());
+console.log(product2.returnFormattedWeightInKg);
