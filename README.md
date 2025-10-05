@@ -25,19 +25,19 @@
 
 [x] Add a fileSize property (number) for digital products.<br>
 [x] Override the getPriceWithTax() method to calculate a final price with no tax, since the digital products do not require tax.<br>
--Use a getter method to return the formatted file size in megabytes.<br>
+[x] Use a getter method to return the formatted file size in megabytes.<br>
 
 ## Create a Tax Calculator Utility:
 
 ### Inside src/utils/taxCalculator.ts, create a utility module to handle tax calculations.
 
--Add a function calculateTax() that accepts a Product object and returns the price including tax.
+[x] Add a function calculateTax() that accepts a Product object and returns the price including tax.
 
 ## Implement the Main Program:
 
 ### Inside src/main.ts, import the PhysicalProduct and DigitalProduct classes, and create instances of both.
 
--Use a loop to display the details of each product, calculate prices with tax, and display the final prices.<br>
+[x] Use a loop to display the details of each product, calculate prices with tax, and display the final prices.<br>
 -Hint: Utilize polymorphism to your advantage here.<br>
 
 ## Compile and Run the Program:
