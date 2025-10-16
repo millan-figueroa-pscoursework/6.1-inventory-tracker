@@ -13,13 +13,13 @@ export default class DigitalProduct extends Product {
         return this.price;
     }
 
-    get returnFormattedFileSize() {
+    get returnFormattedFileSize(): string {
         return `${this.fileSize}MB`
     }
-
 }
 
-const product3 = new DigitalProduct('235', 'Premium Subscription', 10, 15)
+const product3 = new DigitalProduct('238', 'Gold Subscription', 20, 25)
+// const product6 = new PhysicalProduct('239', 'Premium Subscription', 10, 15)
 console.log(product3.getPriceWithTax());
-console.log(product3.returnFormattedFileSize);
-console.log(product3.displayDetails());
+// console.log(product3.returnFormattedFileSize);
+// console.log(product3.displayDetails());

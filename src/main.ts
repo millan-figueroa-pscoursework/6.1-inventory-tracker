@@ -29,7 +29,7 @@ products.forEach((prod) => {
 
 
 
-// console.log(product6.displayDetails());
+console.log(product6.displayDetails());
 // console.log(product5.getPriceWithTax());
 // console.log(product5.returnFormattedFileSize);
 // console.log(product7.displayDetails());

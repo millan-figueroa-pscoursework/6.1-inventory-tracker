@@ -52,7 +52,7 @@
 
 ## Challenge
 
--Add a DiscountableProduct interface that includes a method applyDiscount(). Implement this interface in one of the product classes.<br>
+[x] Add a DiscountableProduct interface that includes a method applyDiscount(). Implement this interface in one of the product classes.<br>
 -Implement a module to handle sorting products by price or by name.<br>
 -Add a new feature to the inventory system: bulk discounts for physical products over a certain quantity or size.
 
