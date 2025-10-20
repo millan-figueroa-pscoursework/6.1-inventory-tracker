@@ -17,10 +17,24 @@ header {
 .container {
   margin-block: 20px;
   padding: 10px;
+  font-size: .9rem;
+}
+
+h2 {
+  font-size: 1rem;
+  color: hotpink;
+}
+
+
+.product-card {
+  padding-block: 15px;
+  border-bottom: 1.5px solid white;
+
+
 }
 
 footer {
-  font-size: .8rem;
+  font-size: .7rem;
   color: greenyellow;
   border-top: 2px solid white;
   padding: 20px;

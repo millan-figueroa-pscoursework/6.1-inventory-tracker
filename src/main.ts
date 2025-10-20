@@ -1,5 +1,5 @@
 import './style.css'
-// import Product from './models/Product.ts'
+import Product from './models/Product.ts'
 import PhysicalProduct from './models/PhysicalProduct.ts'
 import DigitalProduct from './models/DigitalProduct.ts';
 import { calculateTax } from './utils/taxCalculator.ts';
@@ -8,8 +8,12 @@ import { sortByAttribute } from './utils/sortUtils.ts';
 
 
 
-document.querySelector('#app')!.innerHTML = `<div class="container"><p>No items yet.</p></div>`;
-const products = [];
+const app = document.querySelector('#app')!;
+app.innerHTML = `<div class="container"></div>`;
+
+const container = document.querySelector<HTMLDivElement>('.container')!;
+
+const products: Product[] = [];
 
 const product1 = new PhysicalProduct('1', 'cd', 'Karnivool: In Verses', 20, 3)
 const product2 = new PhysicalProduct('2', 'cd', 'Rob Zombie: The Great Satan', 22, 3)
@@ -27,10 +31,27 @@ const product12 = new PhysicalProduct('12', 'tshirt', 'Ellende T-shirt', 22, 2)
 products.push(product1, product2, product3, product4, product5, product6, product6, product7, product8, product9, product10, product11, product12);
 
 products.forEach((prod) => {
-  let tax = calculateTax(prod.price);
+  const tax = calculateTax(prod.price);
   console.log(prod.displayDetails());
   console.log(`Total: $${prod.price + tax}`);
-})
+});
+
+container.innerHTML = products
+  .map((prod) => {
+    const tax = calculateTax(prod.price);
+    const total = (prod.price + tax).toFixed(2);
+    return `
+      <div class="product-card">
+        <h2>${prod.name}</h2>
+        <p><strong>SKU:</strong> ${prod.sku}</p>
+        <p><strong>Category:</strong> ${prod.cat}</p>
+        <p><strong>Price:</strong> $${prod.price.toFixed(2)}</p>
+        <p><strong>Total (with tax):</strong> $${total}</p>
+      </div>
+    `;
+  })
+  .join('');
+
 
 
 // console.log(product2.getWeightInKilos())
