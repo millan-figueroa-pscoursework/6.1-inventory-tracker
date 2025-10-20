@@ -4,8 +4,8 @@ export default class PhysicalProduct extends Product {
 
     weight: number;
 
-    constructor(sku: string, name: string, price: number, weight: number) {
-        super(sku, name, price);
+    constructor(cat: string, sku: string, name: string, price: number, weight: number) {
+        super(cat, sku, name, price);
         this.weight = weight;
     }
 
@@ -18,11 +18,12 @@ export default class PhysicalProduct extends Product {
     }
 
     get returnFormattedWeightInKg(): string {
-        return `${this.weight}kg`
+        let kilos = this.getWeightInKilos();
+        return `${kilos}kg`
     }
 }
 
-// const product2 = new PhysicalProduct('234', 'android', 500, 8);
+// const product2 = new PhysicalProduct('cd', '234', 'android', 500, 8);
 
 // console.log(product2.displayDetails());
 // console.log(product2.getPriceWithTax());

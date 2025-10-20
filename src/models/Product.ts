@@ -1,21 +1,25 @@
 import type { DiscountableProduct } from "../interfaces/discountableProduct";
 
 export default class Product implements DiscountableProduct {
+
     sku: string;
+    cat: string;
     name: string;
     price: number;
-    cat: string;
 
-    constructor(sku: string, name: string, price: number, cat: string) {
+
+    constructor(sku: string, cat: string, name: string, price: number) {
+
         this.sku = sku;
+        this.cat = cat;
         this.name = name;
         this.price = price;
-        this.cat = cat;
+
 
     }
 
     displayDetails(): string {
-        return `SKU: ${this.sku}, Name: ${this.name}, Price: $${this.price}, Category: ${this.cat}`
+        return `SKU: ${this.sku}, Category: ${this.cat}, Name: ${this.name}, Price: $${this.price}`
     }
 
     getPriceWithTax(): number {

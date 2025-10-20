@@ -4,8 +4,8 @@ import Product from './Product';
 export default class DigitalProduct extends Product {
     fileSize: number = 0;
 
-    constructor(sku: string, name: string, price: number, size: number) {
-        super(sku, name, price);
+    constructor(sku: string, cat: string, name: string, price: number, size: number) {
+        super(sku, cat, name, price);
         this.fileSize = size;
     }
 
