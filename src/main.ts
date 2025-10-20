@@ -4,16 +4,11 @@ import PhysicalProduct from './models/PhysicalProduct.ts'
 import DigitalProduct from './models/DigitalProduct.ts';
 import { calculateTax } from './utils/taxCalculator.ts';
 // import type { DiscountableProduct } from "./interfaces/discountableProduct";
+import { sortByAttribute } from './utils/sortUtils.ts';
 
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  <div>
-    <h1>Inventory Tracker</h1>
-    <p class="read-the-docs">
-      Nothing to see here yet.
-    </p>
-  </div>
-`
+
+document.querySelector('#app')!.innerHTML = `<div class="container"><p>No items yet.</p></div>`;
 const products = [];
 
 const product1 = new PhysicalProduct('1', 'cd', 'Karnivool: In Verses', 20, 3)
