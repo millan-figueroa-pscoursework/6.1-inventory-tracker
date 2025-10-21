@@ -46,3 +46,7 @@ footer {
   align-items: center;
 }
 
+.discounted {
+  color: red;
+  font-weight: bold;
+}

@@ -36,12 +36,13 @@ function render(products: Product[]): void {
     .map((prod) => {
       const tax = calculateTax(prod.price);
       const total = (prod.price + tax).toFixed(2);
+      const priceClass = prod.discounted ? 'discounted' : '';
       return `
         <div class="product-card">
           <h2>${prod.name}</h2>
           <p><strong>SKU:</strong> ${prod.sku}</p>
           <p><strong>Category:</strong> ${prod.cat}</p>
-          <p><strong>Price:</strong> $${prod.price.toFixed(2)}</p>
+          <p class="${priceClass}"><strong>Price:</strong> $${prod.price.toFixed(2)}</p>
           <p><strong>Total (with tax):</strong> $${total}</p>
         </div>
       `;
@@ -59,9 +60,9 @@ function updateSort() {
 
 // Function loops through products array, checks if physical product, if wt is less than 3, then applies discount function and re-renders list
 function updateWtDiscount() {
-  products.forEach((prod) => {
-    if (prod instanceof PhysicalProduct && prod.weight < 3) {
-      prod.price = discountByWt(prod);
+  products.forEach((p) => {
+    if (p instanceof PhysicalProduct || p instanceof DigitalProduct) {
+      discountByWt(p);
     }
   });
   render(products);
