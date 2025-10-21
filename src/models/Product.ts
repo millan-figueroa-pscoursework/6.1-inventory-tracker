@@ -6,6 +6,7 @@ export default class Product implements DiscountableProduct {
     cat: string;
     name: string;
     price: number;
+    discounted?: boolean;
 
 
     constructor(sku: string, cat: string, name: string, price: number) {
@@ -14,7 +15,7 @@ export default class Product implements DiscountableProduct {
         this.cat = cat;
         this.name = name;
         this.price = price;
-
+        this.discounted = false;
 
     }
 

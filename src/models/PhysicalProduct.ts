@@ -4,7 +4,7 @@ export default class PhysicalProduct extends Product {
 
     weight: number;
 
-    constructor(cat: string, sku: string, name: string, price: number, weight: number) {
+    constructor(sku: string, cat: string, name: string, price: number, weight: number) {
         super(cat, sku, name, price);
         this.weight = weight;
     }
