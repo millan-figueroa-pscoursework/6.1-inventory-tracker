@@ -58,7 +58,7 @@ function updateSort() {
   render(sorted);
 }
 
-// Function loops through products array, checks if physical product, if wt is less than 3, then applies discount function and re-renders list
+// Function loops through products array, type checks if physical/ digital product, then applies discount function and re-renders list
 function updateWtDiscount() {
   products.forEach((p) => {
     if (p instanceof PhysicalProduct || p instanceof DigitalProduct) {
