@@ -1,16 +1,10 @@
 
-export function sortByAttribute<T>(
-    items: T[],
-    key: keyof T,
-    ascending: boolean = true
-): T[] {
+export function sortByAttribute<T>(items: T[], key: keyof T, ascending = true): T[] {
     return items.sort((a, b) => {
-        const valA = a[key];
-        const valB = b[key];
-
-        if (valA < valB) return ascending ? -1 : 1;
-        if (valA > valB) return ascending ? 1 : -1;
+        if (a[key] > b[key]) return ascending ? 1 : -1;
+        if (a[key] < b[key]) return ascending ? -1 : 1;
         return 0;
     });
 }
+
 
