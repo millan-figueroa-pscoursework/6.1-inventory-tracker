@@ -11,7 +11,28 @@
     <header>
       <h1>Inventory Tracker</h1>
     </header>
-    <main id="app"></main>
+    <div class="container">
+      <section class="toolbar">
+        <label>
+          Sort by:
+          <select id="sort-key">
+            <option value="name">Name</option>
+            <option value="price" selected>Price</option>
+            <option value="category">Category</option>
+            <option value="sku">SKU</option>
+          </select>
+        </label>
+      
+        <label>
+          Order:
+          <select id="sort-order">
+            <option value="asc" selected>Ascending</option>
+            <option value="desc">Descending</option>
+          </select>
+        </label>
+      </section>
+      <main id="app"></main>
+    </div>
     <footer>&copy; 2025 Millan Figueroa</footer>
     <script type="module" src="/src/main.ts"></script>
   </body>

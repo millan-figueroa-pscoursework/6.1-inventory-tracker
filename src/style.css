@@ -5,23 +5,27 @@
 
 body {
   font-family:'Courier New', Courier, monospace;
-  padding: 20px;
-  font-size: 1rem;
+  color: #4d4d4d;
 }
 
 header {
-  padding: 10px;
+  padding: 16px;
   border-bottom: 2px solid white;
+  background-color: #4d4d4d;
+  color: white;
 }
 
 .container {
-  margin-block: 20px;
-  padding: 10px;
-  font-size: .9rem;
+  padding: 15px;
 }
 
+.toolbar {
+  padding-block: 12px;
+}
+
+
 h2 {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: hotpink;
 }
 
@@ -29,11 +33,11 @@ h2 {
 .product-card {
   padding-block: 15px;
   border-bottom: 1.5px solid white;
-
-
+  font-size: 1rem;
 }
 
 footer {
+  background-color: #4d4d4d;
   font-size: .7rem;
   color: greenyellow;
   border-top: 2px solid white;
